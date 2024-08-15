@@ -17,7 +17,7 @@ const splitText = (text) => {
 
 const makeApiRequest = async (text, endpoint) => {
   try {
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyClyd430SwFLkuGRy_7UmJdjdWxGnlDr3I`;
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`;
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
